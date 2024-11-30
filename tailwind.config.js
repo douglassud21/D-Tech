@@ -21,6 +21,7 @@ module.exports = {
       backgroundImage: {
         home: "url('/src/assets/hm.png')",
         samurai: "url('/src/assets/samurai.png')",
+        cfundo: "url('/src/assets/cfundo.jpg')",
       },
       keyframes: {
         floatRight: {

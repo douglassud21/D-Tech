@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <!--Meta Tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/styles/output.css">
+
+    <!--Título-->
+    <title>D-Tech</title>
+
+</head>
+<body 
+    class=
+        "bg-preto w-full h-screen flex font-poppins 
+        mobile:flex-col
+        tablet:flex-row
+        laptop:flex-row
+        desktop:flex-row"
+    >
+    
+    <!--Menu Mobile-->
+    <div id="menu" class="absolute z-50 w-full hidden flex-col items-center px-3 py-2 bg-preto shadow-xl">
+        <button id="btn-close" onclick="closeMenu()" class="text-3xl text-bold mt-4 text-white">X</button>
+            <nav class="flex flex-col mt-8 gap-5 w-full">
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    Home
+                </a>
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    About-me
+                </a>
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    Skills
+                </a>
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    projects
+                </a>
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    Blog
+                </a>
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    Contact
+                </a>
+            </nav>
+    </div>
+
+
+    <!--Navbar-->
+    <header 
+        class=
+            "absolute z-10 bg-black text-white w-full 
+                mobile:p-4 
+                tablet:p-0
+                laptop:p-0
+                desktop:p-0"
+        >
+
+        <!--Alinhamento-->
+        <div 
+            class="flex flex-row items-center px-6
+                    mobile:justify-between
+                    tablet:justify-center
+                    laptop:justify-between
+                    desktop:justify-between"
+        >
+
+            <!--Logotipo-->
+            <div 
+                class="mobile:flex
+                        tablet:hidden
+                        laptop:flex
+                        desktop:flex"
+            >
+                <h1 class="font-bold text-2xl font-protest">D-Tech</h1>
+            </div>
+
+            <!--Itens da Navbar-->
+            <div 
+                class="mobile:hidden
+                        tablet:flex
+                        laptop:flex
+                        desktop:flex"
+            >
+
+                <!--Links-->
+                <nav 
+                    class="font-bold flex 
+                        tablet:gap-3
+                        laptop:gap-5
+                        desktop:gap-6"
+                    >
+
+                    <a href="home.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">Home</a>
+                    <a href="about-me.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">About-me</a>
+                    <a href="skills.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">Skills</a>
+                    <a href="projects.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">Projects</a>
+                    <a href="blog.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">Blog</a>
+                    <a href="contact.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">Contact</a>
+                </nav>
+
+            </div>
+
+            <!--Menu Mobile-->
+            <div class="mobile:flex tablet:hidden laptop:hidden desktop:hidden" id="btn-open" onclick="openMenu()">
+                <a href="#" id="menu">
+                    <img src="icons/menu-aberto.png" alt="Menu">
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main 
+    class="relative w-full h-screen bg-cfundo bg-no-repeat bg-cover 
+           mobile:bg-left tablet:bg-left laptop:bg-left desktop:bg-left"
+    >
+    <div class="absolute inset-0 bg-black bg-opacity-85"></div>
+
+        <div 
+            class="w-full h-screen flex
+                    mobile:flex-col
+                    tablet:flex-row
+                    laptop:flex-row
+                    desktop:flex-row"
+            >
+
+            
+
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-black absolute w-full flex flex-row items-center justify-between p-4 bottom-0">
+        <!-- Redes sociais -->
+        <div class="flex flex-row items-center">
+            <a href="https://www.linkedin.com/in/douglas-da-silva-nascimento-3146122ab/" target="_blank" class="flex flex-row items-center justify-center gap-2 p-4 hover:scale-105 duration-200">
+                <img src="icons/logotipo-do-linkedin (1).png" alt="Icon do Linkedin">
+                <span class="text-white font-bold">LinkedIn</span>
+            </a>
+            <a href="https://github.com/douglassud21" target="_blank" class="flex flex-row items-center justify-center gap-2 p-4 hover:scale-105 duration-200">
+                <img src="icons/github (1).png" alt="Icons do GitHub">
+                <span class="text-white font-bold">GitHub</span>
+            </a>
+        </div>
+        <!-- Ícone do telefone -->
+        <div class="ml-auto">
+            <a href="contact.html">
+                <img src="icons/chamada-telefonica.png" alt="Telefone" class="animate-vibracall">
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

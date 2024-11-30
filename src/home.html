@@ -22,88 +22,218 @@
     <title>D-Tech</title>
 
 </head>
-<body class="bg-preto w-full h-screen font-poppins">
+<body 
+    class=
+        "bg-preto w-full h-screen flex font-poppins 
+        mobile:flex-col
+        tablet:flex-row
+        laptop:flex-row
+        desktop:flex-row"
+    >
     
-    <header class="flex items-center justify-center bg-black text-white w-full h-14 shadow-vermelho2/20 shadow-sm fixed top-0 left-0 z-50">
-        <div class="w-full max-w-[1600px] h-full flex flex-row items-center justify-between">
-            <div class="flex flex-row items-center justify-start h-full w-1/2">
+    <!--Menu Mobile-->
+    <div id="menu" class="absolute z-50 w-full hidden flex-col items-center px-3 py-2 bg-preto shadow-xl">
+        <button id="btn-close" onclick="closeMenu()" class="text-3xl text-bold mt-4 text-white">X</button>
+            <nav class="flex flex-col mt-8 gap-5 w-full">
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    Home
+                </a>
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    About-me
+                </a>
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    Skills
+                </a>
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    projects
+                </a>
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    Blog
+                </a>
+                <a 
+                    href="#" 
+                    class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
+                    Contact
+                </a>
+            </nav>
+    </div>
+
+
+    <!--Navbar-->
+    <header 
+        class=
+            "absolute bg-black text-white w-full 
+                mobile:p-4 
+                tablet:p-0
+                laptop:p-0
+                desktop:p-0"
+        >
+
+        <!--Alinhamento-->
+        <div 
+            class="flex flex-row items-center px-6
+                    mobile:justify-between
+                    tablet:justify-center
+                    laptop:justify-between
+                    desktop:justify-between"
+        >
+
+            <!--Logotipo-->
+            <div 
+                class="mobile:flex
+                        tablet:hidden
+                        laptop:flex
+                        desktop:flex"
+            >
                 <h1 class="font-bold text-2xl font-protest">D-Tech</h1>
             </div>
-            <div class="flex flex-row items-center justify-end h-full w-1/2">
-                <nav class="flex px-4 py-4 gap-8">
-                    <a href="#" class="font-bold hover:text-gray-300 hover:bg-preto p-4 border-b-2 border-transparent hover:border-b-2 hover:border-b-white">Home</a>
-                    <a href="#" class="font-bold hover:text-gray-300 hover:bg-preto p-4 border-b-2 border-transparent hover:border-b-2 hover:border-b-white">About-me</a>
-                    <a href="#" class="font-bold hover:text-gray-300 hover:bg-preto p-4 border-b-2 border-transparent hover:border-b-2 hover:border-b-white">Skills</a>
-                    <a href="#" class="font-bold hover:text-gray-300 hover:bg-preto p-4 border-b-2 border-transparent hover:border-b-2 hover:border-b-white">Projects</a>
-                    <a href="#" class="font-bold hover:text-gray-300 hover:bg-preto p-4 border-b-2 border-transparent hover:border-b-2 hover:border-b-white">Blog</a>
-                    <a href="#" class="font-bold hover:text-gray-300 hover:bg-preto p-4 border-b-2 border-transparent hover:border-b-2 hover:border-b-white">Contact</a>
+
+            <!--Itens da Navbar-->
+            <div 
+                class="mobile:hidden
+                        tablet:flex
+                        laptop:flex
+                        desktop:flex"
+            >
+
+                <!--Links-->
+                <nav 
+                    class="font-bold flex 
+                        tablet:gap-3
+                        laptop:gap-5
+                        desktop:gap-6"
+                    >
+
+                    <a href="home.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">Home</a>
+                    <a href="about-me.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">About-me</a>
+                    <a href="skills.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">Skills</a>
+                    <a href="projects.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">Projects</a>
+                    <a href="blog.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">Blog</a>
+                    <a href="contact.html" class="hover:bg-red-950 p-4 border-b-2 border-transparent hover:border-white">Contact</a>
                 </nav>
+
             </div>
+
+            <!--Menu Mobile-->
+            <div class="mobile:flex tablet:hidden laptop:hidden desktop:hidden" id="btn-open" onclick="openMenu()">
+                <a href="#" id="menu">
+                    <img src="icons/menu-aberto.png" alt="Menu">
+                </a>
+            </div>
+
         </div>
+
     </header>
 
-    <main class="w-full h-full flex flex-row">
-        <!--Esquerda-->
-        <div class="w-1/2 flex items-center justify-center bg-home bg-no-repeat bg-right bg-cover">
+    <!--Main-->
+    <main 
+        class="w-full h-screen flex
+                mobile:flex-col
+                tablet:flex-col
+                laptop:flex-row
+                desktop:flex-row"
+    >
+
+        <!--Esquerda ou cima-->
+        <div 
+            class="bg-home bg-no-repeat bg-cover w-full flex items-center justify-center p-4
+                    mobile:h-screen mobile:flex-col
+                    tablet:h-screen tablet:flex-col
+                    laptop:h-full laptop:w-1/2 laptop:flex-row laptop:bg-right
+                    desktop:h-full desktop:w-1/2 desktop:flex-row desktop:bg-right" 
+        >
             
             <!--Delimitar espaço-->
-            <div class="flex items-center justify-center">
+            <div class="laptop:w-full laptop:ml-14">
                 <!--Conteúdo-->
-                <div>
+                <div class="mobile:w-[360px] tablet:w-[640px] laptop:w-full desktop:w-full">
+
                     <div class="font-protest">
-                        <p class="font-medium text-3xl text-white">Olá, me chamo</p>
-                        <h1 class="font-bold text-5xl text-white">Douglas Nascimento</h1>
-                        <p class="font-medium text-3xl mb-4 text-white animate-floatRight">Desenvolvedor <span class="font-bold text-vermelho">Front-end</span></p>
-                        <p class="font-medium text-lg text-gray-500 font-poppins">
+                        <p class="text-white mobile:text-lg tablet:text-2xl laptop:text-2xl desktop:text-3xl">Olá, me chamo</p>
+                        <h1 class="text-white mobile:text-4xl tablet:text-5xl laptop:text-5xl desktop:text-6xl">Douglas Nascimento</h1>
+                        <p class="text-white mobile:text-2xl tablet:text-3xl laptop:text-3xl desktop:text-4xl animate-floatRight">Desenvolvedor <span class="font-bold text-vermelho">Front-end</span></p>
+                        <p class="text-gray-500 font-poppins mobile:text-base tablet:text-lg desktop:text-lg mobile:mt-4 desktop:mt-8">
                             Transformo ideias em interfaces funcionais, responsivas e visualmente atraentes.<br>
                             Foco em entregar soluções que unem design e tecnologia para criar impacto.
                         </p>
                     </div>
-                    <div class="mt-8 flex flex-row gap-6">
-                        <a href="#" class="flex flex-row items-center justify-start gap-2 hover:scale-105 duration-200">
+
+
+                    <div 
+                        class="flex flex-row mt-4 items-center justify-start gap-6 desktop:mt-8 desktop:gap-8">
+
+                        <a href="https://www.linkedin.com/in/douglas-da-silva-nascimento-3146122ab/" target="_blank" class="flex flex-row items-center justify-center gap-2 hover:scale-105 duration-300">
                             <img src="icons/logotipo-do-linkedin (1).png" alt="Icon do Linkedin">
-                            <span class="font-medium text-white">Linkeln</span>                                                      
+                            <span class="text-white font-bold">Linkeln</span>                                                      
                         </a>
-                        <a href="#" class="flex flex-row items-center justify-start gap-2 hover:scale-105 duration-200">
+                        <a href="#" target="_blank" class="flex flex-row items-center justify-center gap-2 hover:scale-105 duration-300">
                             <img src="icons/mala-de-viagem.png" alt="Icon do curriculo">
-                            <span class="font-medium text-white">Curriculo</span>                              
+                            <span class="text-white font-bold">Curriculo</span>                              
                         </a>
+
                     </div>
-                    <div class="mt-8 flex items-center justify-start">
-                        <a href="" class="text-white text-lg bg-vermelho px-7 py-3 shadow-lg  hover:scale-105 hover:bg-vermelho2 hover:shadow-lg hover:shadow-vermelho2/50 duration-200 hover:font-bold">
+
+
+                    <div class="mt-8 desktop:mt-12">
+                        <a 
+                            href="contact.html" 
+                            class="text-white bg-vermelho font-bold mobile:p-3 tablet:p-4 desktop:p-4 hover:bg-vermelho2 hover:shadow-lg duration-300"
+                        >
                             Contate-me
                         </a>
                     </div>
+
                 </div>
             </div>
         </div>
 
-        <!--Direita-->
-        <div class="w-1/2 flex items-end justify-end">
-            <div class="w-[600px] h-[600px] mb-12">
-                <img src="assets/samurai.png" alt="" class="w-[600px] h-[600px]">
+        <!--Direita ou baixo-->
+        <div 
+            class="w-full 
+                    mobile:hidden mobile:h-1/2
+                    tablet:hidden tablet:h-1/2
+                    laptop:flex laptop:h-full laptop:w-1/2
+                    desktop:flex desktop:h-full desktop:w-1/2"
+        >
+
+            <div class="laptop:absolute bottom-20 right-0">
+                <img src="assets/samurai.png" alt="" class="desktop:w-[600px] desktop:h-[600px]">
             </div>
         </div>
     </main>
 
-    <footer class="bg-black flex flex-row items-center justify-center w-full h-14 fixed bottom-0 left-0 z-50">
-        <div class="text-white font-bold flex flex-row items-center justify-center gap-8">
-            <a href="" class="flex flex-row items-center justify-center gap-2 hover:scale-105 duration-200">
+    <!-- Footer -->
+    <footer class="bg-black absolute w-full flex flex-row items-center justify-between p-4 bottom-0">
+        <!-- Redes sociais -->
+        <div class="flex flex-row items-center">
+            <a href="https://www.linkedin.com/in/douglas-da-silva-nascimento-3146122ab/" target="_blank" class="flex flex-row items-center justify-center gap-2 p-4 hover:scale-105 duration-200">
                 <img src="icons/logotipo-do-linkedin (1).png" alt="Icon do Linkedin">
-                <span>LinkedIn</span>
+                <span class="text-white font-bold">LinkedIn</span>
             </a>
-            <a href="" class="flex flex-row items-center justify-center gap-2 hover:scale-105 duration-200">
+            <a href="https://github.com/douglassud21" target="_blank" class="flex flex-row items-center justify-center gap-2 p-4 hover:scale-105 duration-200">
                 <img src="icons/github (1).png" alt="Icons do GitHub">
-                <span>GitHub</span>
+                <span class="text-white font-bold">GitHub</span>
             </a>
         </div>
-        <div class="absolute right-4 animate-floattop">
-            <a href="#">
+        <!-- Ícone do telefone -->
+        <div class="ml-auto">
+            <a href="contact.html">
                 <img src="icons/chamada-telefonica.png" alt="Telefone" class="animate-vibracall">
             </a>
         </div>
     </footer>
 
-    <script src="#"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
