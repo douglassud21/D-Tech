@@ -22,57 +22,54 @@
     <title>D-Tech</title>
 
 </head>
-<body 
-    class=
-        "bg-preto w-full h-screen flex font-poppins 
+<body class=
+        "bg-preto w-full h-screen flex font-poppins bg-cfundo bg-no-repeat bg-cover
         mobile:flex-col
         tablet:flex-row
         laptop:flex-row
-        desktop:flex-row"
-    >
-    
+        desktop:flex-row">
+
     <!--Menu Mobile-->
     <div id="menu" class="absolute z-50 w-full hidden flex-col items-center px-3 py-2 bg-preto shadow-xl">
         <button id="btn-close" onclick="closeMenu()" class="text-3xl text-bold mt-4 text-white">X</button>
             <nav class="flex flex-col mt-8 gap-5 w-full">
                 <a 
-                    href="#" 
+                    href="home.html" 
                     class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
                     Home
                 </a>
                 <a 
-                    href="#" 
+                    href="about-me.html" 
                     class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
                     About-me
                 </a>
                 <a 
-                    href="#" 
+                    href="skills.html" 
                     class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
                     Skills
                 </a>
                 <a 
-                    href="#" 
+                    href="projects.html" 
                     class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
                     projects
                 </a>
                 <a 
-                    href="#" 
+                    href="blog.html" 
                     class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
                     Blog
                 </a>
                 <a 
-                    href="#" 
+                    href="contact.html" 
                     class="text-white font-bold hover:text-gray-200 hover:bg-red-950 p-3 duration-300">
                     Contact
                 </a>
             </nav>
     </div>
 
-
     <!--Navbar-->
     <header 
         class=
-            "absolute z-10 bg-black text-white w-full 
+            "absolute bg-black text-white w-full z-20
                 mobile:p-4 
                 tablet:p-0
                 laptop:p-0
@@ -135,28 +132,84 @@
 
     </header>
 
-    <main 
-    class="relative w-full h-screen bg-cfundo bg-no-repeat bg-cover 
-           mobile:bg-left tablet:bg-left laptop:bg-left desktop:bg-left"
-    >
-    <div class="absolute inset-0 bg-black bg-opacity-85"></div>
+    <!--Camada de Overlay-->
+    <div class="absolute inset-0 bg-black bg-opacity-90 z-0"></div>
 
-        <div 
-            class="w-full h-screen flex
-                    mobile:flex-col
-                    tablet:flex-row
-                    laptop:flex-row
-                    desktop:flex-row"
-            >
+    <main class="w-full h-full z-10 flex mobile:w-full mobile:flex-col tablet:flex-col laptop:flex-row desktop:flex-row">
+        
+        <section class="flex items-center justify-center h-full mobile:w-full tablet:w-full laptop:w-1/2 desktop:w-1/2">
 
-            
+            <div 
+                class="bg-white w-full h-full 
+                        mobile:max-w-sm mobile:max-h-[250px] 
+                        tablet:max-w-lg tablet:max-h-[300px] 
+                        laptop:max-w-xl laptop:max-h-[600px] 
+                        desktop:max-w-2xl desktop:max-h-[600px]"
+                >
 
-        </div>
+                <div>
+                    <div>
+                        <img src="icons/diplomado.png" alt="">
+                        <h2>Formação e Certificação</h2>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Análise e Desenvolvimento de Sistemas (Cruzeiro do Sul).</li>
+                            <li>Engenharia de Software (Cruzeiro do Sul) - Cursando</li>
+                            <li>Certificações: Front-End pela Dio.me / Udemy / Alura</li>
+                        </ul>
+                        <p>
+                            Estou constantemente em busca de novas oportunidades de aprendizado e acredito 
+                            que a educação contínua é a chave para o sucesso na área de tecnologia.
+                        </p>
+                    </div>
+                </div>
+                <div class="mobile:hidden tablet:hidden laptop:block desktop:block">
+                    <div>
+                        <img src="icons/objetivo.png" alt="">
+                        <h2>Meus Objetivos</h2>
+                    </div>
+                    <div>
+                        <p>
+                            O que me motiva todos os dias é o desejo de me tornar um desenvolvedor front-end cada vez mais completo, 
+                            sempre buscando formas de criar interfaces acessíveis, eficientes e esteticamente agradáveis.
+                        </p>
+                        <p>
+                            Meu objetivo é estar sempre à frente das tendências do mercado e ser capaz de trabalhar em projetos 
+                            desafiadores que me ajudem a crescer como profissional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="h-full bg-green-300 mobile:w-full tablet:w-full laptop:w-1/2 desktop:w-1/2">
+
+            <div class="bg-vermelho">
+                <div>
+                    <img src="icons/balao-de-fala (1).png" alt="">
+                    <h2>Vamos Conversar!</h2>
+                </div>
+                <div>
+                    <p>Se você deseja saber mais sobre mim ou meus projetos, 
+                        fique à vontade para entrar em contato!
+                    </p>
+                    <p>
+                        Estou sempre aberto a novas oportunidades e colaborações.
+                    </p>
+                </div>
+                <div>
+                    <a href="">Contate-me</a>
+                    <a href="">Saiba mais!</a>
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
-
     <!-- Footer -->
-    <footer class="bg-black absolute w-full flex flex-row items-center justify-between p-4 bottom-0">
+    <footer class="bg-black absolute w-full flex flex-row items-center justify-between p-4 bottom-0 z-30">
         <!-- Redes sociais -->
         <div class="flex flex-row items-center">
             <a href="https://www.linkedin.com/in/douglas-da-silva-nascimento-3146122ab/" target="_blank" class="flex flex-row items-center justify-center gap-2 p-4 hover:scale-105 duration-200">
@@ -175,8 +228,6 @@
             </a>
         </div>
     </footer>
-
-
+    
     <script src="script.js"></script>
 </body>
-</html>
